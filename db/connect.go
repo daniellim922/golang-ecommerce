@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
+	"github.com/daniu/ecommerce/app/model"
 	"github.com/daniu/ecommerce/config"
-	"github.com/daniu/ecommerce/model"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

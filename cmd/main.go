@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
+	"github.com/daniu/ecommerce/app/router"
 	"github.com/daniu/ecommerce/config"
 	"github.com/daniu/ecommerce/db"
-	"github.com/daniu/ecommerce/router"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/helmet"
 	"github.com/gofiber/template/handlebars/v2"

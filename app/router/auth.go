@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/daniu/ecommerce/handler"
+	"github.com/daniu/ecommerce/app/handler"
 	"github.com/gofiber/fiber/v2"
 )
 
