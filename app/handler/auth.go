@@ -1,10 +1,12 @@
 package handler
 
 import (
+	"github.com/daniu/ecommerce/app/model"
 	"github.com/gofiber/fiber/v2"
 )
 
-type loginForm struct {
+
+type SignupForm struct {
 	Email string
 	Password string
 }
@@ -20,7 +22,7 @@ func RenderLogin(c *fiber.Ctx) error {
 }
 
 func Login(c *fiber.Ctx) error {
-	data := loginForm{
+	data := model.User{
 		Email: c.FormValue("email"),
 		Password: c.FormValue("password"),
 	}
@@ -31,4 +33,13 @@ func RenderSignup(c *fiber.Ctx) error {
 	return c.Render("auth/signup",fiber.Map{
 		"Title":"Sign Up",
 	})
+}
+
+func Signup(c *fiber.Ctx) error {
+	data := model.User{
+		Username: c.FormValue("username"),
+		Email: c.FormValue("email"),
+		Password: c.FormValue("password"),
+	}
+	return c.JSON(data)
 }

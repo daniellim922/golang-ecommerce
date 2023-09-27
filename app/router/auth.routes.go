@@ -9,5 +9,7 @@ import (
 func AuthRoutes(auth fiber.Router)  {
 	auth.Get("/login", handler.RenderLogin)
 	auth.Post("/login", handler.Login)
+
 	auth.Get("/signup", handler.RenderSignup)
+	auth.Post("/signup", handler.Signup)
 }

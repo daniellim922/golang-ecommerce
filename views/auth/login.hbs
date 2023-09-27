@@ -1,34 +1,13 @@
-<section class="container w-25 h-100 d-flex justify-content-center align-items-center">
+<section
+    class="container w-25 h-100 d-flex justify-content-center align-items-center"
+>
     <main class="w-100">
         <div class="card bg-body-secondary">
             <div class="card-body">
                 <h2 class="card-title text-center">Login</h2>
                 <form action="/auth/login" method="post">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">
-                            Email address
-                        </label>
-                        <input
-                            type="email"
-                            class="form-control"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
-                            required
-                            name="email"
-                        />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">
-                            Password
-                        </label>
-                        <input
-                            type="password"
-                            class="form-control"
-                            id="exampleInputPassword1"
-                            required
-                            name="password"
-                        />
-                    </div>
+                    {{> 'partials/components/Input' label='Email Address' type="email" name="email"}}
+                    {{> 'partials/components/Input' label='Password' type="password" name="password"}}
                     <div class="mb-3 form-check">
                         <input
                             type="checkbox"

@@ -1,7 +1,6 @@
 package router
 
 import (
-	"github.com/daniu/ecommerce/app/handler"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 )
@@ -14,7 +13,4 @@ func SetupRoutes(app *fiber.App)  {
 	login := app.Group("/auth", logger.New())
 	AuthRoutes(login)
 
-	// Middlware
-	api := app.Group("/api", logger.New())
-	api.Get("/", handler.Hello)
 }
