@@ -7,5 +7,5 @@ import (
 
 
 func HomeRoutes(home fiber.Router)  {
-	home.Get("/",handler.Home)
+	home.Get("/", handler.RenderHome)
 }
